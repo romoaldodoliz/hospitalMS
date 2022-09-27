@@ -88,19 +88,19 @@
                         <ul class="nav navbar-nav">
                             <li onclick="check_active('Home')"><a id="Home" href="{{ url('/') }}">Home</a></li>
                             <li onclick="check_active('Services')"><a id="Services" data-scroll
-                                    href="{{ url('/services') }}">Services</a></li>
+                                    href="{{ url('/services') }}">Serviços</a></li>
                             <li onclick="check_active('Doctors')"><a id="Doctors" data-scroll
-                                    href="{{ url('docters') }}">Doctors</a></li>
+                                    href="{{ url('docters') }}">Colaboradores</a></li>
                             <li onclick="check_active('Departments')"><a id="Departments" data-scroll
-                                    href="#departments">Departments</a></li>
+                                    href="#departments">Departamentos</a></li>
                             <li onclick="check_active('About')"><a id="About" data-scroll
-                                    href="{{ url('/about') }}">About us</a></li>
+                                    href="{{ url('/about') }}">Sobre Sapiens</a></li>
                             <li onclick="check_active('Contact')"><a id="Contact" data-scroll
-                                    href="{{ url('contact') }}">Contact</a></li>
+                                    href="{{ url('contact') }}">Contacte-nos</a></li>
                             @auth
                                 @if (auth()->user()->is_super_admin)
                                     <li onclick="check_active('admin-area')"><a id="admin-area" data-scroll
-                                            href="{{ route('admin_settings') }}">Admin Area</a></li>
+                                            href="{{ route('admin_settings') }}">Área do Admin</a></li>
                                 @endif
                             @endauth
 
@@ -128,7 +128,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="footer-info padding">
-                        <h3>CONTACT US</h3>
+                        <h3>CONTACTE-NOS</h3>
                         <p><i class="fa fa-map-marker"
                                 aria-hidden="true"></i>{{ $app ? $app->address : 'distric abc P/O xyz sorana' }}
                         </p>
@@ -149,7 +149,7 @@
                 <div class="col-md-8">
                     <div class="footer-text">
                         <p>© {{ date('Y') }} <a id="tw" href="{{ url('') }}"
-                                target="_blank">{{ env('APP_NAME') }}</a> , Inc</p>
+                                target="_blank">{{ env('APP_NAME') }}</a> , developed by Romoaldo Doliz</p>
                     </div>
                 </div>
                 <div class="col-md-4">
